@@ -1,38 +1,90 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ortho-pedi — NewWay Orthodontic
 
-## Getting Started
+A clean, modern, single-page website for **NewWay – Centre for Craniofacial Pain and Orthodontia**, a specialist dental & orthodontic clinic in Chandigarh and Mohali.
 
-First, run the development server:
+Built with **Next.js (App Router)** and **Tailwind CSS v4**. Fully responsive, SEO-friendly, and optimized for turning visitors into booked appointments.
+
+> _Changing Lives One Smile At A Time!_
+
+---
+
+## ✨ Features
+
+| Section | What it does |
+| --- | --- |
+| **Hero** | Clinic tagline, key highlights, click-to-call & WhatsApp CTAs, and a live stats strip |
+| **About** | Clinic story, specialist credentials, and both clinic locations |
+| **Services** | 9 treatments — Braces, Invisalign, Teeth Whitening, Dental Implants, Pediatric Dentistry, Root Canal, Veneers, Crowns & Bridges, Emergency Care |
+| **Why NewWay** | Trust factors (Black Diamond Invisalign provider, PGIMER/AIIMS-trained doctors, etc.) |
+| **Doctors** | Profile cards with names, qualifications, roles, and bios |
+| **Before & After Gallery** | Interactive drag-to-compare slider for each case |
+| **Testimonials** | Patient reviews with star ratings |
+| **Contact** | Clinic hours, addresses, phone, email, and an embedded Google Map |
+
+**Always-available contact:** floating WhatsApp button, click-to-call, and `mailto:` links throughout the page.
+
+---
+
+## 🛠️ Tech Stack
+
+- [Next.js 16](https://nextjs.org) (App Router, Turbopack)
+- [React 19](https://react.dev)
+- [Tailwind CSS v4](https://tailwindcss.com)
+- [TypeScript](https://www.typescriptlang.org)
+- `next/image` for optimized images · `next/font` (Manrope)
+
+---
+
+## 🚀 Getting Started
 
 ```bash
+# 1. Install dependencies
+npm install
+
+# 2. Run the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Other scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build   # production build
+npm run start   # run the production build
+npm run lint    # lint the codebase
+```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 📁 Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+adi/
+├── app/
+│   ├── layout.tsx        # Root layout, metadata & fonts
+│   ├── page.tsx          # Home page — composes all sections
+│   └── globals.css       # Tailwind theme & brand colors
+├── components/           # Navbar, Hero, About, Services, Doctors,
+│                         # Gallery, Testimonials, Contact, Footer, etc.
+├── lib/
+│   └── data.ts           # All clinic content (services, doctors,
+│                         # testimonials, contact details)
+└── next.config.ts        # Image remote patterns (Unsplash)
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ✏️ Editing Content
 
-## Deploy on Vercel
+All text, treatments, doctors, testimonials, and contact details live in a **single file** — [`lib/data.ts`](lib/data.ts). Update the clinic's real photos, phone numbers, and copy there; no component changes needed.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+> **Note:** Doctor photos, testimonial portraits, and before/after images currently use royalty-free stock placeholders from Unsplash. Swap the image URLs in `lib/data.ts` with the clinic's real photos before going live.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
 
-# Ortho-pedi
+## ☁️ Deploy
+
+The easiest way to deploy is [Vercel](https://vercel.com/new). Import this repository, and Vercel auto-detects the Next.js settings — no configuration needed.
+
+---
+
+_Built for NewWay Orthodontic · Chandigarh & Mohali_
